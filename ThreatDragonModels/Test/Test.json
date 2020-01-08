@@ -7,9 +7,128 @@
     "contributors": [],
     "diagrams": [
       {
-        "title": "Overall",
+        "title": "Overall System",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 160,
+                "y": 180
+              },
+              "angle": 0,
+              "id": "04a4587d-8a02-4a5d-a94c-1feb8c273cbf",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Quartz\nScheduler"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 270,
+                "y": 360
+              },
+              "angle": 0,
+              "id": "b7e7fe23-bd15-4637-8f66-f9fb68e2e8ff",
+              "z": 2,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Configuration File Can Change",
+                  "type": "Tampering"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Configuration File"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "b7e7fe23-bd15-4637-8f66-f9fb68e2e8ff"
+              },
+              "target": {
+                "id": "04a4587d-8a02-4a5d-a94c-1feb8c273cbf"
+              },
+              "vertices": [],
+              "id": "2f4684f8-625b-4ba4-bc7d-a95a03a7d13c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Read Configuration",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "protocol": "File System",
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 340,
+                "y": 70
+              },
+              "target": {
+                "x": 480,
+                "y": 460
+              },
+              "vertices": [],
+              "id": "4508901e-0c62-4252-b484-8312125b9d08",
+              "z": 4,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 790
+        }
       }
     ],
     "reviewer": "Bulent"
